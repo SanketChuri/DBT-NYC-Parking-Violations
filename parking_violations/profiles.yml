@@ -1,0 +1,18 @@
+parking_violations:
+  # outputs:
+  #   dev:
+  #     type: duckdb
+  #     path: '../data/parking_violations.db'
+  # target: dev 
+
+  outputs:
+   dev:
+     type: duckdb
+     path: '../data/parking_violations.db'
+   prod:
+     type: duckdb
+     # note that path is slightly different as GitHub actions
+     # start in the root directory and not in the
+     # parking_violations directory
+     path: '../data/prod_parking_violations.db'  
+  target: dev
